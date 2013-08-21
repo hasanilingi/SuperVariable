@@ -6,10 +6,8 @@
  * @link    https://github.com/olekukonko/SuperVariable/
  */
 
-
 use Oleku\Supervarriable\Filter\Parsable;
 use Oleku\Supervarriable\Filter\Basic;
-
 
 class Varriable implements \ArrayAccess, \IteratorAggregate, \JsonSerializable
 {
@@ -143,7 +141,7 @@ class Varriable implements \ArrayAccess, \IteratorAggregate, \JsonSerializable
 	 */
 	public function __get ( $offset )
 	{
-		if ( $this->flags ^ Varriable::ALLOW_GET )
+		if ( !( $this->flags & Varriable::ALLOW_GET ) )
 		{
 			throw new \ErrorException( "You are not alloowed to get individual elements" );
 		}
@@ -232,7 +230,7 @@ class Varriable implements \ArrayAccess, \IteratorAggregate, \JsonSerializable
 	 */
 	public function offsetSet ( $offset, $value )
 	{
-		if ( $this->flags ^ Varriable::ALLOW_SET )
+		if ( !( $this->flags & Varriable::ALLOW_SET ) )
 		{
 			throw new \ErrorException( "Offset assignment disabled" );
 		}
@@ -249,8 +247,8 @@ class Varriable implements \ArrayAccess, \IteratorAggregate, \JsonSerializable
 	 */
 	public function offsetGet ( $offset )
 	{
-		// check if you can get
-		if ( $this->flags ^ Varriable::ALLOW_GET )
+
+		if ( !( $this->flags & Varriable::ALLOW_GET ) )
 		{
 			throw new \ErrorException( "Offset retrival disabled" );
 		}
