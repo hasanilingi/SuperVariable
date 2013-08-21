@@ -1,6 +1,7 @@
 {
     "name": "oleku/supervarriable",
     "description": "Filter for inputs",
+	"license": "MIT",
     "authors": [
         {
             "name": "Oleku Konko",
@@ -10,5 +11,14 @@
     "minimum-stability": "dev",
     "require": {
 
-    }
+    },
+	"autoload": {
+		"psr-0": {
+			"Oleku\\Supervarriable": "src/"
+		},
+		"classmap": [
+			"src/Oleku/Supervarriable",
+			"src/Oleku/Supervarriable/Filter"
+		]
+	}
 }
