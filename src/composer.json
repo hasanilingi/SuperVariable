@@ -1,0 +1,15 @@
+{
+    "name": "oleku/supervarriable",
+    "description": "Filter for inputs",
+    "license": "http://opensource.org/licenses/MIT",
+    "authors": [
+        {
+            "name": "Oleku Konko",
+            "email": "oleku.konko@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    }
+}
