@@ -7,9 +7,8 @@ I simple wrapper `POST`, `GET` , `REQUEST` or any `Array` in PHP
 In your php file where you want to use
 ```PHP
 use Oleku\Supervarriable\Varriable;
+use Oleku\Supervarriable\Filter\Basic;
 
-use \super\filter\Basic;
-use \super\Varriable;
 // Generate Fake post Data
 $_POST['hello'] = "Hello word";
 
