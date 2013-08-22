@@ -6,7 +6,11 @@
         {
             "name": "Oleku Konko",
             "email": "oleku.konko@gmail.com"
-        }
+        },
+        {
+            "name": "Hasan İlingi",
+            "email": "hasanilingi@gmail.com"
+        }        
     ],
     "minimum-stability": "dev",
     "require": {
